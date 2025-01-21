@@ -33,7 +33,7 @@
 * 上传来自本地的 Document 链接 (`.pdf`, `.docx`, `.csv`, `.txt`)，并且向大模型询问有关 Document 内容。
 * 提供两种模型选择:
   * `gpt4free`
-    * **允许使用者在无需输入 API 密钥或付款的情况下使用该应用程序**
+    * 允许使用者在无需输入 API 密钥或付款的情况下使用该应用程序
     * 需选择 Provider
   * `openai`
     * **需要有** `openai_api_key`
