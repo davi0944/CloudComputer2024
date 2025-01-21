@@ -44,11 +44,11 @@
 
 ### 功能
 
-- **`gpt4free 整合：任何人都可以免费使用 GPT4，无需输入 OpenAI API 密钥
-- **支持 docx, pdf, csv, txt 文件: 可以上传 PDF, Word, CSV, txt 文件
-- **直接输入 Document 网址：使用者可以直接输入 Document URL 进行解析，无需从本地上传文件
-- **Langchain Agent：AI 能够回答当前问题，实现类似 Google 搜索功能
-- **简易操作环境：界面简洁，操作简便
+- gpt4free 整合：任何人都可以免费使用 GPT4，无需输入 OpenAI API 密钥
+- 支持 docx, pdf, csv, txt 文件: 可以上传 PDF, Word, CSV, txt 文件
+- 直接输入 Document 网址：使用者可以直接输入 Document URL 进行解析，无需从本地上传文件
+- Langchain Agent：AI 能够回答当前问题，实现类似 Google 搜索功能
+- 简易操作环境：界面简洁，操作简便
 
 ---
 
