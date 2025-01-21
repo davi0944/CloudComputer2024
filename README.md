@@ -1,39 +1,82 @@
-# 2024-秋 云计算系统期末大作业上传专用
+##丹砂
 
-### 提交截止日期
-**1月26日（第20周周日）**
+允许用户与上传的文件 (`.pdf`, `.docx`, `.csv`, `.txt`) 进行对话
 
-### 提交内容
-1. **项目说明文档**  
-   包括以下内容：
-   - 项目背景  
-   - 设计思路  
-   - 技术实现  
-   - 团队分工  
-2. **源代码**  
-   - 完整代码，包括所有实现的功能模块。  
-   - 必要的配置文件和说明。
-3. **演示视频**  
-   - 提供一个简洁明了的视频，展示项目的核心功能和使用场景。
+项目架构图:
+根目录/
+├── .git/
+├── .github/
+├── .idea/
+├── .streamlit/
+├── components/
+├── docGPT/
+├── model/
+├── static/
+├── .gitignore
+├── app/
+├── docker-compose
+├── Dockerfile
+├── LICENSE
+├── README
+└── requirements
 
-### 提交方式
-将以上内容上传至本仓库各组指定的分支。
-| 分支名   | 项目名                                                    |
-|----------|-----------------------------------------------------------|
-| 001      | WordWise——词慧                                            |
-| 002      | 人工智能辅助中小学立体几何题目可视化                      |
-| 003      | TeachLink——基于 LangChain 的智能教师系统                  |
-| 004      | “语”众不同——结合 LangChain 实现少数民族母语保护与双语教育工具 |
-| 005      | 基于 LangChain 的中学生解题辅助系统                       |
-| 006      | 丹铅——基于大模型的辅助论文阅读网页                        |
-| 007      | 基于 LangChain 的教育类文本处理工具                       |
-| 008      | 粤言——基于 LangChain 的粤语学习助手                       |
-| 009      | Glimmer—基于 Graph 的个性化学习平台                       |
-| 010      | “学海智航”：LearnSailor——基于 LangChain 的知识图智能问答系统 |
-| 011      | BotAnIst——基于 LangChain 的植物知识增强 AI 问答系统       |
-| 012      | SignSpark——语焰                                           |
-| 013      | AstroChain——星链                                          |
-| 014      | 基于多模态大模型的音乐教育对话优化生成系统                 |
-| 015      | Storming                                                  |
-| 016      | VerseSky——诗境                                            |
-| 017      | 师问智联助手——TQBot                                       |
+* 主要开发软件与套件:
+    * `Python 3.10.11`
+    * `Langchain 0.0.218`
+    * `Streamlit 1.22.0`
+    * [more](./requirements.txt)
+
+### 介绍
+
+* 上传来自本地的 Document 链接 (`.pdf`, `.docx`, `.csv`, `.txt`)，并且向大模型询问有关 Document 内容。例如: 您可以请 GPT 帮忙总结文章
+* 提供两种模型选择:
+  * `gpt4free`
+    * **允许使用者在无需输入 API 密钥或付款的情况下使用该应用程序**
+    * 需选择 Provider
+  * `openai`
+    * **需要有** `openai_api_key`
+    * 如果有 `serpapi_key`，AI 的回应可以包括 Google 搜索结果
+
+
+---
+
+### 功能
+
+- **`gpt4free 整合：任何人都可以免费使用 GPT4，无需输入 OpenAI API 密钥
+- **支持 docx, pdf, csv, txt 文件: 可以上传 PDF, Word, CSV, txt 文件
+- **直接输入 Document 网址：使用者可以直接输入 Document URL 进行解析，无需从本地上传文件
+- **Langchain Agent：AI 能够回答当前问题，实现类似 Google 搜索功能
+- **简易操作环境：界面简洁，操作简便
+
+---
+
+### 部署
+
+首先 `git clone https://github.com/OpenEduTech/CloudComputer2024/tree/006`
+
+方法有如下几种方法:
+
+* 本地不使用docker:
+    * 下载开发需求套件
+        ```
+        pip install -r requirements.txt
+        ```
+
+    * 于项目根目录启动服务
+        ```
+        streamlit run ./app.py
+        ```
+
+* 本地使用docker:
+    * 使用 Docker Compose 启动服务
+        ```
+        docker-compose up
+        ```
+    
+    * 停止服务运行
+        ```
+        docker-compose down
+        ```
+
+---
+
