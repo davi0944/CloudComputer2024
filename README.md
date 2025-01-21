@@ -1,8 +1,9 @@
-##丹砂
+#丹砂
 
 允许用户与上传的文件 (`.pdf`, `.docx`, `.csv`, `.txt`) 进行对话
 
 项目架构图:
+```python
 根目录/
 ├── .git/
 ├── .github/
@@ -19,6 +20,7 @@
 ├── LICENSE
 ├── README
 └── requirements
+```
 
 * 主要开发软件与套件:
     * `Python 3.10.11`
